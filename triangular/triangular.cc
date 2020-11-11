@@ -107,6 +107,25 @@ void Triangular::display(int length, int beg_pos, ostream &os)
     TriangularIterator last(beg_pos + length);
     for (; first != last; ++first)
     {
-        std::cout << *first << " " << std::endl;
+        std::cout << *first << " ";
     }
+    cout << std::endl;
+}
+
+ostream &operator<<(ostream &os, const Triangular &rhs)
+{
+    os << "(" << rhs.beg_pos() << "," << rhs.length() << ")";
+    rhs.display(rhs.length(), rhs.beg_pos(), os);
+    return os;
+}
+istream &operator>>(istream &is, Triangular &rhs)
+{
+    char ch1, ch2;
+    int bp, len;
+    is >> ch1 >> bp >> ch2 >> len;
+    rhs.beg_pos(bp);
+    rhs.length(len);
+    rhs.NextReset();
+
+    return is;
 }

@@ -6,9 +6,15 @@
 #include <iostream>
 #include "tirangular_iterator.h"
 using std::cout;
+using std::istream;
 using std::ostream;
 using std::string;
 using std::vector;
+
+class Triangular;
+ostream &operator<<(ostream &os, const Triangular &rhs);
+istream &operator>>(istream &is, Triangular &rhs);
+
 class Triangular
 {
 public:
@@ -17,6 +23,10 @@ public:
 
     int length() const { return length_; }
     int beg_pos() const { return beg_pos_; }
+
+    void length(int len) { length_ = len; }
+    void beg_pos(int bp) { beg_pos_ = bp; }
+
     int elem(int pos) const;
 
     bool next(int &val) const;
@@ -48,6 +58,8 @@ private:
     static vector<int> elems_;
 
     friend class TriangularIterator;
+    friend ostream &operator<<(ostream &os, const Triangular &rhs);
+    friend istream &operator>>(istream &is, Triangular &rhs);
 };
 
 #endif // __TRIANGULAR
