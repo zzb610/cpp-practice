@@ -14,14 +14,14 @@ public:
     // dtor
     virtual ~NumSequence();
 
-    virtual int Elem(int pos) const = 0;
+    virtual int Elem(int pos) = 0;
     virtual const char *WhatAMI() const = 0;
     static int MaxElems() { return kMaxElems; }
     virtual ostream &print(ostream &os = cout) const = 0;
 
 protected:
     virtual void GenElems(int pos) const = 0;
-    bool CheckIntegrity(int pos) const;
+    virtual bool CheckIntegrity(int pos, int size);
     const static int kMaxElems;
 
     friend ostream &operator<<(ostream &os, const NumSequence &ns);
