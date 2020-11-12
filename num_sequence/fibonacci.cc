@@ -26,7 +26,7 @@ ostream &Fibonacci::print(ostream &os) const
 
     if (end_pos > elems_.size())
     {
-        Fibonacci::GenElems(end_pos);
+        GenElems(end_pos);
     }
     while (elem_pos < end_pos)
     {
