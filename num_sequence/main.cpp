@@ -4,6 +4,7 @@
 using namespace std;
 int main(int, char **)
 {
+    cout << "hello world" << endl;
     Fibonacci fib;
 
     cout << "fib: beginning at element 1 for 1 element:" << fib << endl;

@@ -36,3 +36,9 @@
 
 # cmkae
 build
+
+# vs
+.vs
+.vs/*
+
+out
