@@ -9,6 +9,16 @@ const int NumSequence::kMaxElems = 1024;
 // dtor
 NumSequence::~NumSequence() {}
 
+int NumSequence::Elem(int pos)
+{
+    if(!CheckIntegrity(pos, relems_.size()))
+    {
+        return 0;
+    }
+
+    return relems_[];
+}
+
 bool NumSequence::CheckIntegrity(int pos, int size)
 {
     if (pos <= 0 || pos > kMaxElems)
@@ -27,3 +37,4 @@ ostream &operator<<(ostream &os, const NumSequence &ns)
 {
     return ns.print(os);
 }
+
