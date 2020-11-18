@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ifndef __FIBONACCI_H__
 #define __FIBONACCI_H__
 
@@ -29,24 +28,4 @@ protected:
     static vector<int> elems_;
 };
 
-=======
-#ifndef __FIBONACCI_H__
-#define __FIBONACCI_H__
-
-#include "num_sequence.h"
-
-#include <vector>
-using std::vector;
-
-class Fibonacci : public NumSequence
-{
-public:
-    virtual const char *WhatAMI() const { return "Fibonacci"; };
-
-protected:
-    virtual void GenElems(int pos) const;
-    static vector<int> elems_;
-};
-
->>>>>>> 42dd1595a04f4dc91aa43058a60f34cb19240577
 #endif // __FIBONACCI_H__
