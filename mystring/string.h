@@ -1,6 +1,9 @@
 #ifndef __MYSTRING__
 #define __MYSTRING__
 
+
+// basic version
+// move-aware class version see move/mystring.cpp
 class String
 {
 public:
