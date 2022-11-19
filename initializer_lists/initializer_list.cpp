@@ -29,7 +29,7 @@ public:
 
     constexpr const_iterator begin() const noexcept
     {
-        return _M_array；
+        return _M_array;
     }
     constexpr const_iterator end() const noexcept
     {
