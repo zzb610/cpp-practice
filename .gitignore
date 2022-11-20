@@ -42,3 +42,6 @@ build
 .vs/*
 
 out
+
+# clangd
+.cache
